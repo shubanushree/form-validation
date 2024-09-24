@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Login Page</title>
+    
+</head>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYxGBPbBnl5uRDuf7FyLvoDPiIRSJ78HyhmA&s') no-repeat center center fixed;
+    background-size: cover;
+}
+.login-container {
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 550px;
+}
+h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+.input-field {
+    margin-bottom: 15px;
+}
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white;
+    font-size: 16px;
+}
+.input-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white;
+    font-size: 16px;
+}
+.input-field input::placeholder {
+    color: white;
+}
+.input-field textarea::placeholder {
+    color: white;
+}
+.radio-button{
+    margin-bottom: 15px;
+    
+}
+.radio-button label{
+    color: white;
+}
+.radio-button input {
+        margin-left: 20px;
+}
+.checkbox-button{
+    margin-bottom: 15px;
+    
+}
+.checkbox-button label{
+    color: white;
+}
+.checkbox-button input {
+        margin-left: 20px;
+}
+.select-button{
+    margin-bottom: 15px;
+}
+.select-button select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white;
+    font-size: 16px;
+}
+.select-button option{
+    color: black;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 123, 255, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: rgba(0, 123, 255, 1); 
+}
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+.register-link p {
+    color: white;
+}
+.register-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+.register-link a:hover {
+    text-decoration: underline;
+}
+@media (min-width: 768px) {
+    body {
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYxGBPbBnl5uRDuf7FyLvoDPiIRSJ78HyhmA&s') no-repeat center center fixed;
+    background-size: cover;
+  }
+    .login-container {
+        width: 450px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYskyEIyYrIzYmFvAR-HKMpIxj969RA9YpkXQcI5cZ6JSkmZolSgLDXakcv3WWB4CljsI&usqp=CAU') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .login-container {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body{
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_EZ7L-Ehpd731tmz0hklIq_IteOi2tb4R6Q&s') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .login-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .input-field input, 
+    .input-field textarea, 
+    .select-button select, 
+    button {
+        font-size: 14px;
+    }
+
+    .radio-button label,
+    .checkbox-button label {
+        font-size: 14px;
+    }
+    
+    button {
+        padding: 8px;
+    }
+}
+
+</style>
+<body>
+    <div class="login-container">
+        <h2>Registration</h2>
+        <form>
+            <div class="input-field">
+                <input type="text" id="fname" name="fname" placeholder="First Name">
+            </div>
+            <div class="input-field">
+                <input type="text" id="lname" name="lname" placeholder="Last Name" >
+            </div>
+            <div class="input-field">
+                <input type="text" id="username" name="username" placeholder="User Name" >
+            </div>
+            <div class="input-field">
+                <input type="email" id="email" name="email" placeholder="Email Id" >
+            </div>
+            <div class="input-field">
+                <input type="password" id="password" name="password" placeholder="password" >
+            </div>
+            <div class="input-field">
+                <input type="date" id="dob" name="dob" placeholder="Date Of Birth" >
+            </div>
+            <div class="radio-button">
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="Male" >
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female" >
+                <label for="female">Female</label>
+            </div>
+            <div class="input-field">
+                <input type="number" id="phone" name="phone" placeholder="Phone Number" >
+            </div>
+            <div class="input-field">
+            <textarea id="address" name="address" placeholder="Address"></textarea>
+            </div>
+            <div class="select-button">
+                <select name="city" id="city" >
+                    <option value="select city">Select City</option>
+                    <option value="Theni">Theni</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Salem">Salem</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Dindigul">Dindigul</option>
+                </select>
+            </div>
+            <button type="submit">Register</button>
+            
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+            
+            // Input fields
+            const fname = document.getElementById('fname');
+            const lname = document.getElementById('lname');
+            const username = document.getElementById('username');
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const dob = document.getElementById('dob');
+            const phone = document.getElementById('phone');
+            const city = document.getElementById('city');
+            const genderMale = document.getElementById('male');
+            const genderFemale = document.getElementById('female');
+        
+            // Regex patterns
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phonePattern = /^[0-9]{10}$/;
+        
+            // Form validation
+            form.addEventListener('submit', function (event) {
+                
+                if (fname.value.trim() === '') {
+                    alert('First Name is required');
+                    fname.focus();  // Focus on the field with the error
+                    event.preventDefault();  // Stop form submission
+                    return;
+                }
+        
+                if (lname.value.trim() === '') {
+                    alert('Last Name is required');
+                    lname.focus();
+                    event.preventDefault();
+                    return;
+                }
+        
+                if (username.value.trim() === '') {
+                    alert('Username is required');
+                    username.focus();
+                    event.preventDefault();
+                    return;
+                }
+        
+                if (!emailPattern.test(email.value.trim())) {
+                    alert('Please enter a valid email');
+                    email.focus();
+                    event.preventDefault();
+                    return;
+                }
+        
+                if (password.value.trim().length < 6) {
+                    alert('Password must be at least 6 characters long');
+                    password.focus();
+                    event.preventDefault();
+                    return;
+                }
+        
+                if (dob.value.trim() === '') {
+                    alert('Date of Birth is required');
+                    dob.focus();
+                    event.preventDefault();
+                    return;
+                }
+        
+                if (!genderMale.checked && !genderFemale.checked) {
+                    alert('Please select your gender');
+                    event.preventDefault();
+                    return;
+                }
+        
+                if (!phonePattern.test(phone.value.trim())) {
+                    alert('Phone number must be 10 digits');
+                    phone.focus();
+                    event.preventDefault();
+                    return;
+                }
+        
+                if (city.value === 'select city') {
+                    alert('Please select a city');
+                    city.focus();
+                    event.preventDefault();
+                    return;
+                }
+        
+                // If everything is valid
+                alert('Form submitted successfully!');
+            });
+        });
+        </script>
+        
+</body>
+</html>
